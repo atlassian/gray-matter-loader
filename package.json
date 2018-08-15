@@ -1,0 +1,12 @@
+{
+  "name": "gray-matter-loader",
+  "version": "0.0.0",
+  "description": "A gray-matter loader module for webpack",
+  "main": "index.js",
+  "author": "Ajay Narain Mathur <ajaynarainmathur@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "gray-matter": "^4.0.1",
+    "webpack": "^2.0.0 || ^3.0.0 || ^4.0.0"
+  }
+}

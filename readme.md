@@ -2,7 +2,13 @@
 
 > A webpack loader for [gray-matter](https://www.npmjs.com/package/gray-matter)
 
-Usage:
+## Why use this loader and not the library directly?
+
+The gray-matter library can be used in browser thus you can import gray-matter in your application and call the default export function to achieve what you want to, but if you only want to pull gray-matter from markdown why not do it at the build time and save some bundle-size.
+
+Bundle Size of gray-matter on [bundlephobia: gray-matter](https://bundlephobia.com/result?p=gray-matter@4.0.1)
+
+## Usage:
 
 add it to project
 
@@ -41,7 +47,7 @@ Now you can simply display your content the way you would do conventionally but 
 
 For further read please read docs for [gray-matter](https://www.npmjs.com/package/gray-matter)
 
-### Example
+## Example
 
 There is a example folder if you want to try this package, do following to get it running:
 

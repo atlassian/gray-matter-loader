@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Ajay Narain Mathur <ajaynarainmathur@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/ajaymathur/gray-matter-loader.git",
   "scripts": {
     "test": "ava"
   },

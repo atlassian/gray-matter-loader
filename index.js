@@ -39,7 +39,7 @@ function purifyOptions(options) {
 }
 
 module.exports = function(source /*: string*/) /*: string*/ {
-  const options = getOptions(this);
+  const options = getOptions(this) || {};
   validateOptions(optionsSchema, options, "gray-matter Loader");
 
   let opts = purifyOptions(options);

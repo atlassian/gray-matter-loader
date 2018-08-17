@@ -19,5 +19,17 @@
   },
   "devDependencies": {
     "ava": "^0.25.0"
-  }
+  },
+  "keywords": [
+    "gray",
+    "matter",
+    "gray-matter",
+    "gray-matter-loader",
+    "webpack",
+    "loader",
+    "webpack loader",
+    "markdown",
+    "parser",
+    "markdown parser"
+  ]
 }

@@ -5,25 +5,25 @@ const validateOptions = require("schema-utils");
 
 const grayMatterOptionsType = {
   excerpt: {
-    anyOf: [{ type: "boolean" }, { instanceof: "Function" }]
+    anyOf: [{ type: "boolean" }, { instanceof: "Function" }],
   },
   excerpt_separator: {
-    type: "string"
+    type: "string",
   },
   engines: {
-    type: "object"
+    type: "object",
   },
   language: {
-    type: "string"
+    type: "string",
   },
   delimiters: {
-    type: "string"
-  }
+    type: "string",
+  },
 };
 
 const optionsSchema = {
   type: "object",
-  properties: grayMatterOptionsType
+  properties: grayMatterOptionsType,
 };
 
 function purifyOptions(options) {
@@ -40,6 +40,7 @@ function purifyOptions(options) {
 
 module.exports = function(source /*: string*/) /*: string*/ {
   const options = getOptions(this) || {};
+
   validateOptions(optionsSchema, options, "gray-matter Loader");
 
   let opts = purifyOptions(options);

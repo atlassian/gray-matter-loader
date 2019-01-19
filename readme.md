@@ -1,37 +1,35 @@
 # gray-matter-loader
 
-> A webpack loader for [gray-matter](https://www.npmjs.com/package/gray-matter)
+> Webpack loader for [gray-matter](https://www.npmjs.com/package/gray-matter)
 
-## Why use this loader and not the library directly?
+## Benifits of using gray-matter-loader
 
-The gray-matter library can be used in browser thus you can import gray-matter in your application and call the default export function to achieve what you want to, but if you only want to pull gray-matter from markdown why not do it at the build time and save some bundle-size.
+1. **Smaller bundle**: With gray-matter-loader there is no need to bundle gray-matter in you application. Thus, saving you ~44kb of bundle size, see [bundlephobia: gray-matter](https://bundlephobia.com/result?p=gray-matter@latest)
 
-Bundle Size of gray-matter on [bundlephobia: gray-matter](https://bundlephobia.com/result?p=gray-matter@4.0.1)
+2. **Faster**: The webpack loader runs at build time thus there is no run time impact in extracting front matter from file.
 
 ## Usage:
 
-add it to project
+Add gray-matter-loader to your project:
 
 ```sh
-yarn add --dev npm i gray-matter-loader
+yarn add --dev gray-matter-loader
 ```
 
-Then in you webpack config add this as a rule:
+Add a rule in the webpack config of the project to use gray-matter-loader for files from which we need to extract the front-matter
 
 ```js
 module: {
-    rules: [
-        {
-            test: /\.md$/,
-            use: [
-                { loader: "gray-matter-loader" }
-            ]
-        }
-    ]
+  rules: [
+    {
+      test: /\.md$/,
+      use: [{ loader: "gray-matter-loader" }],
+    },
+  ];
 }
 ```
 
-Then simply import a markdown in you application, you will an object with
+After this, when you import file in you application you will get the parsed file in the following format:
 
 ```js
   "content": "Sample page content\n---\n\nRest on content from page\n",
@@ -43,13 +41,13 @@ Then simply import a markdown in you application, you will an object with
 }
 ```
 
-Now you can simply display your content the way you would do conventionally but here you also get `data` field which will gray matter of your markdown.
+The **_data_** property of the object has the front-matter and the content of the file is the _content_ property.
 
 For further read please read docs for [gray-matter](https://www.npmjs.com/package/gray-matter)
 
-## Example
+## Using example
 
-There is a example folder if you want to try this package, do following to get it running:
+We have added an example project in this repo for testing. To run follow the following steps:
 
 ```sh
 git clone https://github.com/ajaymathur/gray-matter-loader.git
@@ -59,4 +57,4 @@ cd example
 yarn webpack --watch
 ```
 
-Now open index.html in the example folder in any browset to see the output. Also, go ahead and edit sample.md and/ or webapck.config.js to see create use cases.
+Now open the _index.html_ file in the example folder in a browser to see the output. Go ahead and edit sample.md and/ or webapck.config.js to test different use cases.

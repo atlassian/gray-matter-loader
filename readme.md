@@ -13,7 +13,7 @@
 Add gray-matter-loader to your project:
 
 ```sh
-yarn add --dev npm i gray-matter-loader
+yarn add --dev gray-matter-loader
 ```
 
 Add a rule in the webpack config of the project to use gray-matter-loader for files from which we need to extract the front-matter
@@ -47,7 +47,7 @@ For further read please read docs for [gray-matter](https://www.npmjs.com/packag
 
 ## Using example
 
-We have added an example project in this repo for testing. To run follow following steps:
+We have added an example project in this repo for testing. To run follow the following steps:
 
 ```sh
 git clone https://github.com/ajaymathur/gray-matter-loader.git
@@ -57,4 +57,4 @@ cd example
 yarn webpack --watch
 ```
 
-Now open the _index.html_ file in the example folder in a browser to see the output.Go ahead and edit sample.md and/ or webapck.config.js to test different use cases.
+Now open the _index.html_ file in the example folder in a browser to see the output. Go ahead and edit sample.md and/ or webapck.config.js to test different use cases.

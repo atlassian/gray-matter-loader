@@ -1,12 +1,12 @@
 # gray-matter-loader
 
-> Webpack loader for [gray-matter](https://www.npmjs.com/package/gray-matter)
+> Webpack loader for extracting front-matter using [gray-matter](https://www.npmjs.com/package/gray-matter)
 
-## Benifits of using gray-matter-loader
+## Benefits
 
-1. **Smaller bundle**: With gray-matter-loader there is no need to bundle gray-matter in you application. Thus, saving you ~44kb of bundle size, see [bundlephobia: gray-matter](https://bundlephobia.com/result?p=gray-matter@latest)
+1. **Faster render**: The webpack loader runs at build time to pre-compile your front matter into json files for faster loading, removing the step to convert them at run-time.
 
-2. **Faster**: The webpack loader runs at build time thus there is no run time impact in extracting front matter from file.
+2. **Smaller bundle**: There is no need to bundle gray-matter in you application anymore. Thus, saving you ~44kb of bundle size, see [bundlephobia: gray-matter](https://bundlephobia.com/result?p=gray-matter@latest)
 
 ## Usage:
 

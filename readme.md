@@ -57,4 +57,4 @@ cd example
 yarn webpack --watch
 ```
 
-Now open the _index.html_ file in the example folder in a browser to see the output. Go ahead and edit sample.md and/ or webapck.config.js to test different use cases.
+Now open the _index.html_ file in the example folder in a browser to see the output. Go ahead and edit sample.md and/ or webpack.config.js to test different use cases.
